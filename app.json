@@ -1,14 +1,14 @@
 {
-    "name": "Torrent Bot",
+    "name": "TPB Torrent Bot",
     "description": "A telegram bot to search torrents and get magnet links",
-    "author": "Amit",
+    "author": "theriturajps",
     "keywords": [
         "torrent",
         "magnet links",
         "telegram bot",
         "python"
     ],
-    "repository": "https://github.com/amit-y11/torrent_bot",
+    "repository": "https://github.com/theriturajps/TPB-Torrent-Bot",
     "env":{
         "bot_token":{
             "description":"Telegram bot token",
