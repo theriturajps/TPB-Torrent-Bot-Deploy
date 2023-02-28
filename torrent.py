@@ -90,7 +90,7 @@ def getlink(update,context):
 	torrent_name=context.user_data['torrent_name']
 	link=magnet_link[number-1]
 	torrent=torrent_name[number-1]
-	update.message.reply_text(torrent+f"\n<b>magnet Link :</b> <pre>{link}</pre>\n\n<b>Visit <a href="https://www.prodownload.in">ProDownload.In</a></b>",parse_mode=telegram.ParseMode.HTML)
+	update.message.reply_text(torrent+f"\n<b>magnet Link :</b> <pre>{link}</pre>\n\n<b>Visit www.prodownload.in</b>",parse_mode=telegram.ParseMode.HTML)
 	
 def history (update,context):
 	history=context.user_data['history']
