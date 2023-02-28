@@ -54,7 +54,7 @@ def search (update,context):
 		a=i+1
 		
 		link="/get_magnet_link"+str(a)
-		result.insert(i,(str(i+1)+") "+name+"\n<b>size:</b> "+size+"\n<b>Magnet Link:</b> "+link+"\n<b>Seeders:</b> "+str(seeder)+"\n<b>Leechers:</b> "+str(leechers)+"\n<b>Upload Date:</b> "+str(upload_date)+"\n\n<b>Visit <a href="https://www.prodownload.in">ProDownload.In</a></b>"))
+		result.insert(i,(str(i+1)+") "+name+"\n<b>size:</b> "+size+"\n<b>Magnet Link:</b> "+link+"\n<b>Seeders:</b> "+str(seeder)+"\n<b>Leechers:</b> "+str(leechers)+"\n<b>Upload Date:</b> "+str(upload_date)+"\n\n<b>Visit ProDownload.In</b>"))
 		i+=1
 	
 	if len(result)%4==0:
@@ -90,7 +90,7 @@ def getlink(update,context):
 	torrent_name=context.user_data['torrent_name']
 	link=magnet_link[number-1]
 	torrent=torrent_name[number-1]
-	update.message.reply_text(torrent+f"\n<b>magnet Link :</b> <pre>{link}</pre>\n\n<b>Visit www.prodownload.in</b>",parse_mode=telegram.ParseMode.HTML)
+	update.message.reply_text(torrent+f"\n<b>magnet Link :</b> <pre>{link}</pre>\n\n<b>Visit ProDownload.In</b>",parse_mode=telegram.ParseMode.HTML)
 	
 def history (update,context):
 	history=context.user_data['history']
