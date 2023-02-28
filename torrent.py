@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 @run_async
 def start(update,context):
 	name=update.message.chat.first_name
-	update.message.reply_text("Hi! "+name+"\nWelcome to Torrent Search Bot 😃,\nYou can search torrents using this bot just send me a search query to get started")
+	update.message.reply_text("Hi! "+name+"\nWelcome to Pro Torrent Search Bot 😃,\nYou can search torrents magnet links using this bot just send me a search query to get started\n\nDeveloper @RituRajPS")
 
 @run_async    
 def search (update,context):
@@ -54,7 +54,7 @@ def search (update,context):
 		a=i+1
 		
 		link="/get_magnet_link"+str(a)
-		result.insert(i,(str(i+1)+") "+name+"\nsize: "+size+"\nMagnet Link: "+link+"\nSeeders: "+str(seeder)+"\nLeechers: "+str(leechers)+"\nUpload Date: "+str(upload_date)+"\n\n"))
+		result.insert(i,(str(i+1)+") "+name+"\n<b>size:</b> "+size+"\n<b>Magnet Link:</b> "+link+"\n<b>Seeders:</b> "+str(seeder)+"\n<b>Leechers:</b> "+str(leechers)+"\n<b>Upload Date:</b> "+str(upload_date)+"\n\n<b>Visit <a href="https://www.prodownload.in">ProDownload.In</a></b>))
 		i+=1
 	
 	if len(result)%4==0:
@@ -90,7 +90,7 @@ def getlink(update,context):
 	torrent_name=context.user_data['torrent_name']
 	link=magnet_link[number-1]
 	torrent=torrent_name[number-1]
-	update.message.reply_text(torrent+f"\nmagnet Link : <pre>{link}</pre>",parse_mode=telegram.ParseMode.HTML)
+	update.message.reply_text(torrent+f"\n<b>magnet Link :</b> <pre>{link}</pre>\n\n<b>Visit <a href="https://www.prodownload.in">ProDownload.In</a></b>",parse_mode=telegram.ParseMode.HTML)
 	
 def history (update,context):
 	history=context.user_data['history']
@@ -135,7 +135,7 @@ def button(update,context):
 
 persistence=PicklePersistence('torrentdata')
 def main():
-    token=os.environ.get("bot_token", "")
+    token=os.environ.get("bot_token", "6287419486:AAE_QsXW9U6iXcqRXVNJ7I_ZKZ0kUdkG4gU")
     updater = Updater(token,use_context=True, persistence=persistence)
     dp=updater.dispatcher
     dp.add_handler(CommandHandler('start',start))
